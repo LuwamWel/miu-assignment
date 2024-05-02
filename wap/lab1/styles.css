@@ -1,0 +1,13 @@
+#profile-pic {
+    width: 200px; /* Set width to 300 pixels */
+    height: 200px; /* Set height to 200 pixels */
+}
+#htmlchecker-image {
+    width: 100px; /* Set width to 300 pixels */
+    height: 30px; /* Set height to 200 pixels */
+    margin-left: 2vw;
+}
+figcaption {
+    font-size: 2vw;
+    font-family: fantasy;
+}

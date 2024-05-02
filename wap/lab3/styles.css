@@ -1,0 +1,89 @@
+body{
+    /* background-color:lightgray */
+}
+
+.main-wrapper{
+    padding: auto;
+    background-color:antiquewhite;
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+} 
+
+.container {
+    text-align: center;
+}
+
+.container div {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+table{
+    border-collapse: collapse;
+    width: 99%;
+    height: 99%;
+    text-align: center;
+    font-size: 16;
+    margin-left: 4px;
+}
+ 
+td, th {
+    border: 1px solid black;
+}
+
+div{
+    margin-left: 10px;
+}
+
+.cart-icon {
+    margin: 0 auto;
+    width: 70x; 
+    height: 30px; 
+}
+
+#logo{
+    width: 80px; 
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 8px;
+
+    margin-bottom: 0px;
+
+    float: left;
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+#placeorder{
+    margin-right: 10px;
+    margin-top: 8px;
+    float: right;
+}
+
+tfoot{
+    text-align: center;
+}
+
+#logout{
+    margin-right: 10px;
+    margin-top: 8px;
+    float: right;
+}
+
+span .welcome{
+    margin: center;
+    float:center;
+}
+
+#htmlchecker-image,  #csschecker-image{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 80px; 
+    height: 20px; 
+}
+
+
