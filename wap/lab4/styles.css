@@ -1,0 +1,84 @@
+
+.main{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: auto;
+    width: 70%;
+    margin-top: 50px; 
+}
+
+.header{
+    background-color:rgb(0, 136, 204);
+    padding: 20px;
+    border-radius: 5px;
+
+}
+#workshop{
+    font-size: 20px;
+    font-weight: bold;
+    font-style:inherit;
+}
+.more_actions{
+    margin-left: 30px;
+}
+
+.form-item{
+    margin-bottom: 20px;
+
+}
+
+.form-item label {
+    display: inline-block; 
+    width: 100px; 
+    vertical-align: top; /* Align the label to the top */
+    margin-right: 10px; /* Add margin between label and textarea */
+}
+
+.form-item textarea {
+    display: inline-block; /* Display the textarea as inline-block */
+    vertical-align: top; /* Align the textarea to the top */
+}
+
+
+span.sub_title{
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.workshop{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 30px 20px 20px;
+}
+.sub_main{
+    display: flex;
+    padding-left: 10px;
+}
+
+.sub_main .sub_main2{
+        width: 45%;
+        margin-right: 2%;
+        padding: 10px;
+    }        
+
+.footer{
+    display: flex; 
+    background-color:rgb(77, 210, 255);
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 350px;
+}
+
+button, #htmlchecker-image,  #csschecker-image{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 70px; 
+    height: 25px; 
+    font-weight: bold; 
+    background-color: #3c8b8f;
+}
+
