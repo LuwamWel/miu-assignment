@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class = "main">
+        <div class="header">
+            <header >
+                <div>
+                    <span id="workshop">Workshop Registration</span>
+
+                    <span class = "more_actions">
+                        <label for="more_actions">More Actions</label>
+                        <select name="more_actions" id="more_actions"> </select>
+                    </span>
+
+                </div>
+            </header>
+        </div>
+        <form action="#">
+            <div class="sub_main">
+                <div class = "sub_main2">
+                        <span class = "sub_title" id="register_now">Register now while seats are available!</span>
+                        <div class="form-item">
+                            <label for="first_name">First Name:</label>
+                            <input type = "text"
+                            id="first_name"
+                            name = "first_name"
+                            placeholder="Enter your first name"
+                            required
+                            size =30
+                            autofocus>
+                        </div>
+                        <div class="form-item">
+                            <label for="last_name">Last Name:</label>
+                            <input type = "text"
+                            id="last_name"
+                            name = "last_name"
+                            placeholder="Enter your last name"
+                            required
+                            size =30 
+                            autofocus>
+                        </div>
+                        <div class="form-item"> 
+                            <label for="company_name">Company/ Institution:</label>
+                            <input type = "text"
+                            id="company_name"
+                            name = "company_name"
+                            placeholder="Enter company/institution name"
+                            required
+                            size =30
+                            >
+                        </div>
+                        <div class="form-item">
+                            <label for="address">Address:</label>
+                            <textarea name="address" id="address" cols="25" rows="8" required></textarea>
+                        </div>
+                        <div class="form-item">
+                            <label for="city">City:</label>
+                            <input type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter city"
+                            size =30
+                            >
+                        </div>
+                        <div class="form-item">
+                            <label for="state">State:</label>
+                            <select name="state" id="state">
+                                <option value="option1">Alabama</option>
+                                <option value="option2">Alaska</option>
+                                <option value="option3">Arizona</option>
+                                <option value="option4">Arkansas</option>
+                                <option  selected value="option5">California</option>
+                                <option value="option6">Colorado</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label for="country">Country:</label>
+                            <select name="country" id="country">
+                                <option value="option1">US</option>
+                                <option value="option2">Canada</option>
+                                <option value="option3">Mexico</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label for="email">Email:</label>
+                            <input type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="Enter your email here"
+                            size =30
+                            >
+                        </div>
+                        <div class="form-item">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel"
+                            name="phone"
+                            id="phone"
+                            required
+                            placeholder="Enter your phone number"
+                            size =30
+                            >
+                        </div>
+                    </div>
+                <!-- ================= -->
+                <div class = "sub_main2">    
+                    <div>
+                        <span class ="sub_title" id ="lunch">Lunch</span>
+                    </div>
+                    <div class="form-item">
+                        <label for="meal_preference">Meal Preference</label>
+                        <select name="meal_preference" id="meal_preference">
+                            <option value="option1">Vegetarian</option>
+                            <option value="option2">Vegan</option>
+                            <option value="option3">Dairy Free</option>
+                            <option value="option4">Carnivore</option>
+                            <option value="option5">Keto</option>
+                        </select>
+                    </div>
+                    <span class = "sub_title" id = "payment_details">Payment Details</span>
+                    <div class="form-item">
+                        <label for="payment_mode">Payment Mode</label>
+                        <input type="radio" name="payment_mode" value="cash">Cash
+                        <input type="radio" name="payment_mode" value="cheque">Cheque 
+                        <input type="radio" name="payment_mode" value="demand_draft">Demand Draft
+                    </div> 
+                    <div class="form-item">
+                        <label for="dd_chequenum">DD/Cheque No.</label>
+                        <input type="text"
+                        name="dd_chequenum"
+                        id="dd_chequenum"
+                        size =30
+                        >
+                    </div>
+
+                    <div class="form-item">
+                        <label for="drawn_on">Drawn on(Bank Name)</label>
+                        <input type="text"
+                        name="drawn_on"
+                        id="drawn_on"
+                        size =30
+                        >
+                    </div>
+                    <div class="form-item">
+                        <label for="payable_at">Payable at</label>
+                        <input type="text"
+                        name="payable_at"
+                        id="payable_at"
+                        size =30
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= -->  
+        </form>
+        <footer>
+            <div class="footer">
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fluwamwel.github.io%2FWap-lab2%2F" target= "_blank">
+                    <img id="htmlchecker-image" src="./htmlchecker.png" alt="htmlchecker image">
+                </a>
+    
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fluwamwel.github.io%2FWap-lab2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target= "_blank">
+                    <img id="csschecker-image" src="./csschecker.png" alt="csschecker image">
+                </a>
+
+                <button>Submit</button>
+                <button>Reset</button>
+
+            </div>
+        </footer>
+        
+
+    </div> 
+</body>
+</html>
