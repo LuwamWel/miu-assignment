@@ -1,29 +1,91 @@
-// 1.====================
+console.log("1---Using self---")
 
-let group = {
+let group1 = {
 
     title: "Our Group",
 
     students: ["John", "Pete", "Alice"],
 
     showList: function () {
-
+        const self = this;
         this.students.forEach(function (student) {
-
-            console.log(group.title + ": " + student
-
-            );
-
+            console.log(self.title + ": " + student);
         });
-
     }
-
 };
+group1.showList();
 
-group.showList();
+
+console.log("2---Using arrow function---")
+
+let group2 = {
+
+    title: "Our Group",
+
+    students: ["John", "Pete", "Alice"],
+
+    showList: function () {
+        this.students.forEach((student) => {
+            console.log(this.title + ": " + student);
+        });
+    }
+};
+group2.showList();
 
 
-// 2.=====================
+console.log("3---Using call---")
+
+let group3 = {
+
+    title: "Our Group",
+
+    students: ["John", "Pete", "Alice"],
+
+    showList: function () {
+        this.students.forEach(s=> function(student){
+            console.log(this.title + ": " + student);
+        }.call(this, s));
+    }
+};
+group3.showList();
+
+
+console.log("4---Using bind---")
+
+let group4 = {
+
+    title: "Our Group",
+
+    students: ["John", "Pete", "Alice"],
+
+    showList: function () {
+        this.students.forEach(function(student){
+            console.log(this.title + ": " + student);
+        }.bind(group4));
+    }
+};
+group4.showList();
+
+
+console.log("5---Using group5.---")
+
+let group5 = {
+
+    title: "Our Group",
+
+    students: ["John", "Pete", "Alice"],
+
+    showList: function () {
+        this.students.forEach(function (student) {
+            console.log(group5.title + ": " + student
+            );
+        });
+    }
+};
+group5.showList();
+
+
+// Question 2
 let i = 0;
 
 setTimeout(() => console.log(i), 100); // ?
