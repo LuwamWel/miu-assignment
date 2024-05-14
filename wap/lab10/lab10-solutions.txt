@@ -1,0 +1,47 @@
+
+1. In Node.js there are event loop queues and microtask queues. In the event loop queues there are: 
+        * timer(this phase executes callbacks scheduled by setTimeout() and setInterval()).
+        * I/O(execute I/O related callbacks).
+        * polling(retrieve new I/O events; execute I/O related callbacks (almost all with the exception of close callbacks, the ones
+            scheduled by timers, and setImmediate());
+            node will block here when appropriate).
+        * check(setImmediate() callbacks are invoked here).
+        * close (some close callbacks like socket.on )
+    In Microtask queues:
+        * nextTick queue(Node processes all the callbacks in the nextTick queue after
+                    the current operation completes and before the event loop continues.)
+        * promise queue(All callbacks in the promise queue are executed after callbacks in the nextTick queue.)
+
+        Callbacks in the Microtask Queues have priority. they are executed before callbacks in the Timer Queue.
+
+2.   Output:
+        start
+	    end
+	    nextTick 1
+	    nextTick 2
+	    Promise...1
+	    Promise...2
+	    timeout 1
+	    timeout 2
+    	nextTick 3
+	    timeout 3    
+
+3.  Output: 
+        timeout
+	    readFile....
+	    Immediate
+
+4.  In Node.js:
+    output: undefined because in node js, this keyword refers to global object and message is not defined on the global object.
+
+    In browser:
+    Output: 'Hello World'  this keyword inside a regular function refers to the global object (window), and message is a global variable.
+
+
+5. Console output:  Josh Edward
+
+6. Throws error because pattern2.js does not exist in the same folder as app.js
+
+7. Throws error because pattern2.js does not exist in the same folder as app.js
+
+8. Console output: { firstname: 'John', lastname: 'Smith' }    
