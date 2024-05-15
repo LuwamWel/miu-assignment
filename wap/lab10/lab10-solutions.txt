@@ -26,8 +26,8 @@
 
 3.  Output: 
         timeout
-	readFile....
 	Immediate
+	readFile....
 
 4.  In Node.js:
     output: undefined because in node js, this keyword refers to global object and message is not defined on the 
@@ -37,10 +37,10 @@
     Output: 'Hello World'  this keyword inside a regular function refers to the global object (window), and message 
     is a global variable.
 
-5. Console output:  Josh Edward
+5.  Console output:  Josh Edward
 
-6. Throws error because pattern2.js does not exist in the same folder as app.js
+6.  Throws file not found error because In app.js, we are trying to import from pattern2.js, but the filename is pattern1.js.
 
-7. Throws error because pattern2.js does not exist in the same folder as app.js
+7.  Throws file not found error because In app.js, we are trying to import from pattern2.js, but the filename is pattern1.js.
 
-8. Console output: { firstname: 'John', lastname: 'Smith' }    
+8.  Console output: { firstname: 'John', lastname: 'Smith' }    
