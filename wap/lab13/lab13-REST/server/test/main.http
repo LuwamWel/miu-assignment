@@ -1,0 +1,27 @@
+GET http://localhost:3000/products 
+
+###
+GET http://localhost:3000/products/3
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "title": "MWA",
+    "price": 2000,
+    "description": "You will learn Angular"
+}
+
+###
+DELETE http://localhost:3000/products/2
+
+###
+PUT http://localhost:3000/products/5
+Content-Type: application/json
+
+{
+    "title": "MWA",
+    "price": 3000,
+    "description": "You will learn Angular"
+}
