@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the main content takes up all available space */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subform {
+    flex: 1;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Additional styling to enhance the appearance */
+.header-container, .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.header-form {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.footer-button {
+    margin: 0 10px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+#progress-bar {
+    margin: 0 10px;
+}
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #1db954, #1a1a1a);
+    width: 100%;
+    max-width: 900px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-sizing:border-box;
+}
