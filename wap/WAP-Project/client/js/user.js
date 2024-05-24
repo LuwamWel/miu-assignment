@@ -15,7 +15,7 @@ document.getElementById('loginButton').addEventListener('click', function(event)
     .then(response => {
       
       if (!response.ok) {
-        throw new Error('Invalid credentials');
+        throw new Error('Invalid...');
       }
       return response.json();
     })

@@ -7,7 +7,7 @@ const authenticate = (req, res, next) => {
   if (username && User.getSession(username)) {
     next(); 
   } else {
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status(401).json({ error: 'Unauthorized User' });
   }
 };
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstname: 'Luwam',
+            printname:function(greeting){
+                console.log(`${greeting} ${this.firstname}`);
+
+            }
+        }
+        // // setTimeout(person.printname('Hi'),5000); // fix this
+
+        // // setTimeout(()=> person.printname('Hi').call(person), 5000); // does not work
+
+        // // ==========usign wrapper function============   
+        // setTimeout(function(){
+        //     person.printname('Hi');
+        // }, 5000);
+
+        // //==========usign arrow function============ 
+        // setTimeout(()=>{
+        //     person.printname('Hola');
+        // }, 5000)
+        // //=========using function wrapper=============
+        // setTimeout(function(){
+        //     person.printname('Hi');
+        // }, 5000)
+
+        // //=========using call=============
+        // setTimeout(function () {
+        //      person.printname.call(person, 'Hello');
+        // }, 5000);
+
+        // //=========using apply=============
+        // setTimeout(()=> person.printname.apply(person, ['Selamat']), 5000);
+
+        // //=========using call=============
+        // setTimeout(()=> person.printname.call(person, 'Ahlen'), 5000);
+
+
+        // //=========using bind=============
+        // setTimeout(person.printname.bind(person, 'Jebale'), 5000);
+
+
+
+
+        // ==================question 2======================
+
+            // let obj = {
+            //     x: 1,
+            //     y: 2
+            // };
+
+            // obj = Object.create({x: 5, y: 10});
+            // console.log(obj.x + obj.y);
+
+    // ==================question ======================
+    const user ={
+        fname: 'Josh',
+        greet: function(){
+            function setName(fname){
+                this.fname = fname;
+            }
+            setName.call(user,'Edward');
+        }
+    };
+    user.greet();
+    console.log(user.fname);
+
+    // ===========corrected way===================
+//     const user2 = {
+//     fname: 'Josh',
+//     greet: function () {
+//         const setName = (fname) => {
+//             this.fname = fname;
+//         }
+//         setName('Edward');
+//     }
+// };
+// user2.greet();
+// console.log(user2.fname); // Output will be 'Edward'
+
+       
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

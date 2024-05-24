@@ -1,0 +1,26 @@
+GET http://localhost:3000/playlists/Luwam
+
+###
+POST http://localhost:3000/playlists/Luwam
+Content-Type: application/json
+
+{
+    "songId" : 7 ,
+    "username" :"Luwam"
+}
+
+###
+DELETE  http://localhost:3000/playlists/Luwam/3
+
+###
+GET http://localhost:3000/songs/all
+
+###
+POST http://localhost:3000/user/1
+
+###
+GET http://localhost:3000/user
+
+###
+GET http://localhost:3000/user/logout
+
