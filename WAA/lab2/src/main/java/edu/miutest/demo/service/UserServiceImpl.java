@@ -1,47 +1,45 @@
 package edu.miutest.demo.service;
 
+import edu.miutest.demo.entity.Post;
 import edu.miutest.demo.entity.Userr;
-import edu.miutest.demo.repo.UserRepo;
+import edu.miutest.demo.repo.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
-    UserRepo userRepo;
+    UserRepository userRepository;
     @Autowired
     ModelMapper modelMapper;
 
     @Override
     public List<Userr> findAll() {
-        return userRepo.findAll();
+        return userRepository.findAll();
     }
 
     @Override
     public void save(Userr u) {
-        userRepo.save(u);
+        userRepository.save(u);
     }
 
     @Override
     public Userr findById(long id) {
-        return modelMapper.map(userRepo.findById(id), Userr.class);
+        return modelMapper.map(userRepository.findById(id), Userr.class);
     }
 
     @Override
     public void delete(long id) {
-        userRepo.delete(id);
+        userRepository.deleteById(id);
     }
 
-//    @Override
-//    public List<Post> findPostByUserId(long id) {
-//        return userRepo.findPostByUserId(id);
-//    }
-
-//    @Override
-//    public void update(long id, Userr usr) {
-//        userRepo.update(id, usr);
-//    }
+    @Override
+    public List<Post> findPostByUserId(long id) {
+        Userr usr = userRepository.findById(id).orElse(null);
+        return usr.getPosts().stream().map(post -> modelMapper.map(post, Post.class)).toList();
+    }
 
 }

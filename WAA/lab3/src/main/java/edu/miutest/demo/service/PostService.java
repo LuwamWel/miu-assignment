@@ -10,8 +10,7 @@ public interface PostService {
     public void save(Post p);
     public PostSimpleDto findById(long id);
     public void delete(long id);
-
- //  public void update(long id, Post p);
+    public void updatePostById(long id, Post p);
 
 
 

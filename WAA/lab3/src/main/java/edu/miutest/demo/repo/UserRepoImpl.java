@@ -1,47 +1,49 @@
 package edu.miutest.demo.repo;
 
-import edu.miutest.demo.entity.User;
+import edu.miutest.demo.entity.Post;
+import edu.miutest.demo.entity.Userr;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 @Repository
 public class UserRepoImpl implements UserRepo {
-    private static List<User> users = new ArrayList<>();
+    private static List<Userr> users = new ArrayList<>();
+    private final ModelMapper modelMapper;
+
+    public UserRepoImpl(ModelMapper modelMapper) {
+        this.modelMapper = modelMapper;
+    }
+
     @Override
-    public List<User> findAll() {
+    public List<Userr> findAll() {
         return users;
     }
 
     @Override
-    public User findById(long id) {
+    public Userr findById(long id) {
         return users.stream()
-                .filter(user -> user.getId() == id)
+                .filter(usr -> usr.getId() == id)
                 .findFirst()
                 .orElse(null);
     }
 
     @Override
-    public void save(User user) {
-        users.add(user);
+    public void save(Userr usr) {
+        users.add(usr);
     }
 
     @Override
     public void delete(long id) {
-        users.removeIf(user -> user.getId() == id);
+        users.removeIf(usr -> usr.getId() == id);
     }
 
-//    @PersistenceContext
-//    private EntityManager entityManager;
-//
-//    @Override
-//    public List<Post> findPostByUserId(long userId) {
-//        User user = entityManager.find(User.class, userId);
-//        if (user != null) {
-//            return user.getPosts();
-//        } else {
-//            return null;
-//        }
-//    }
+    @Override
+    public List<Post> findPostByUserId(long id) {
+        Userr usr = findById(id);
+        return usr.getPosts();
+    }
+
 
 }

@@ -45,7 +45,7 @@ public class PostRepoImpl implements PostRepo{
     }
 
     @Override
-    public void update(long id, Post p) {
+    public void updatePostById(long id, Post p) {
         posts.stream()
                 .filter(post -> post.getId() == id)
                 .findFirst()

@@ -1,5 +1,6 @@
 package edu.miutest.demo.controller;
 
+import edu.miutest.demo.entity.Post;
 import edu.miutest.demo.entity.Userr;
 import edu.miutest.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,16 +34,10 @@ public class UserController {
         userService.delete(id);
     }
 
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/{id}/posts")
+    public List<Post> findById(@PathVariable("id") long id){
+        return userService.findPostByUserId(id);
+    }
 
-//    @ResponseStatus(HttpStatus.OK)
-//    @GetMapping("/{id}/posts")
-//    public List<Post> findById(@PathVariable("id") long id){
-//        return userService.findPostByUserId(id);
-//    }
-
-//    @ResponseStatus(HttpStatus.OK)
-//    @PutMapping("/{id}")
-//    public void update(@PathVariable("id") long id, @RequestBody Userr u){
-//        postService.update(id, u);
-//    }
 }

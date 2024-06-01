@@ -33,18 +33,16 @@ public class PostController {
         postService.save(p);
     }
 
-
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") long id){
         postService.delete(id);
     }
 
-
-//    @ResponseStatus(HttpStatus.OK)
-//    @PutMapping("/{id}")
-//    public void update(@PathVariable("id") long id, @RequestBody Post p){
-//        postService.update(id, p);
-//    }
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/{id}")
+    public void updatePostById(@PathVariable("id") long id, @RequestBody Post p){
+        postService.updatePostById(id, p);
+    }
 
 }
