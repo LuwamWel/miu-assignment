@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/users")
+@RequestMapping("api/users")
 public class UserController {
     @Autowired
     UserService userService;
 
 
-    @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/")
-    public List<Userr> findAll(){
-        return userService.findAll();
-    }
+//    @ResponseStatus(HttpStatus.OK)
+//    @GetMapping("/")
+//    public List<Userr> findAll(){
+//        return userService.findAll();
+//    }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/")
@@ -31,13 +31,20 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") long id){
-        userService.delete(id);
+        userService.deleteById(id);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}/posts")
     public List<Post> findById(@PathVariable("id") long id){
         return userService.findPostByUserId(id);
+    }
+
+    //    Make a query that will retrieve all the users that have more than (n) posts.
+
+    @GetMapping("/")
+    public List<Userr> getAllUsersWithMoreThanNPosts(@PathVariable int numOfPosts){
+        return userService.getAllUsersWithMoreThanNPosts(numOfPosts);
     }
 
 }

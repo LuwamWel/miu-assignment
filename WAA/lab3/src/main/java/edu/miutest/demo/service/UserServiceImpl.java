@@ -8,11 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService{
+
     @Autowired
     UserRepository userRepository;
+
     @Autowired
     ModelMapper modelMapper;
 
@@ -32,7 +35,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void delete(long id) {
+    public void deleteById(long id) {
         userRepository.deleteById(id);
     }
 
@@ -40,6 +43,11 @@ public class UserServiceImpl implements UserService{
     public List<Post> findPostByUserId(long id) {
         Userr usr = userRepository.findById(id).orElse(null);
         return usr.getPosts().stream().map(post -> modelMapper.map(post, Post.class)).toList();
+    }
+    @Override
+    public List<Userr> getAllUsersWithMoreThanNPosts(Integer n){
+        List<Userr> usersList =  userRepository.findAll();
+        return usersList.stream().filter(usr ->usr.getPosts().size() > n).collect(Collectors.toList());
     }
 
 }

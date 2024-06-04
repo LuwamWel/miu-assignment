@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("api/posts")
 public class PostController {
     @Autowired
     PostService postService;
@@ -44,5 +44,14 @@ public class PostController {
     public void updatePostById(@PathVariable("id") long id, @RequestBody Post p){
         postService.updatePostById(id, p);
     }
+
+//    Make a query that will find all the posts that match a given title.
+
+//    @ResponseStatus(HttpStatus.OK)
+//    @GetMapping("/")
+//    //http://localhost:8080/api/users/posts?title=title
+//    public List<Post> findAllPostsByTitle(@RequestParam String title){
+//        return postService.findAllPostsByTitle(title);
+//    }
 
 }
