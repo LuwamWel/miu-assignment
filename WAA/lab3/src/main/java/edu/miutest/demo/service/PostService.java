@@ -11,7 +11,7 @@ public interface PostService {
     public PostSimpleDto findById(long id);
     public void delete(long id);
     public void updatePostById(long id, Post p);
-    public List<Post> findAllPostsByTitle(String title);
+    public List<Post> findPostsByTitle(String title);
 
 
 

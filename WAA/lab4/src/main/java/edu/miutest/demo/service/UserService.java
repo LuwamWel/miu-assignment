@@ -11,6 +11,6 @@ public interface UserService {
     public Userr findById(long id);
     public void deleteById(long id);
     public List<Post> findPostByUserId(long id);
-    public List<Userr> getAllUsersWithMoreThanNPosts(Integer n);
+    public List<Userr> findUsersWithMoreThanNPosts(Integer n);
 
 }

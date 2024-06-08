@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -48,9 +47,16 @@ public class PostServiceImpl implements PostService {
         postRepository.save(postEntity);
     }
 
+//    @Override
+//    public List<Post> findPostsByTitle(String title){
+//        List<Post> postsList = postRepository.findAll();
+//        return postsList.stream().filter(post ->post.getTitle().equals(title)).collect(Collectors.toList());
+//    }
+
     @Override
-    public List<Post> findAllPostsByTitle(String title){
-        List<Post> postsList = postRepository.findAll();
-        return postsList.stream().filter(post ->post.getTitle().equals(title)).collect(Collectors.toList());
+    public List<Post> findPostsByTitle(String title){
+        return postRepository.findByTitleContaining(title);
     }
+
+
 }

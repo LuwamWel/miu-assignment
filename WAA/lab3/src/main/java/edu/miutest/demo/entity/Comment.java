@@ -15,8 +15,7 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @ManyToOne
     @JsonManagedReference
-//    @JoinColumn(mappedBy = "comments")
-    Post post;
+    @ManyToOne()
+    private Post post;
 }

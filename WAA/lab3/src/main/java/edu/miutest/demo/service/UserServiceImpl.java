@@ -45,9 +45,10 @@ public class UserServiceImpl implements UserService{
         return usr.getPosts().stream().map(post -> modelMapper.map(post, Post.class)).toList();
     }
     @Override
-    public List<Userr> getAllUsersWithMoreThanNPosts(Integer n){
+    public List<Userr> findUsersWithMoreThanNPosts(Integer n){
         List<Userr> usersList =  userRepository.findAll();
         return usersList.stream().filter(usr ->usr.getPosts().size() > n).collect(Collectors.toList());
     }
+
 
 }

@@ -17,6 +17,7 @@ public class Userr {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     String name;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     @JsonManagedReference
