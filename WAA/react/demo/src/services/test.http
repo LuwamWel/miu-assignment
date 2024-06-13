@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/users/posts
+Content-Type: application/json
+
+{
+  "title": "Spring rocks",
+  "content": "Spring is the greatest framework ever",
+  "author": "Joe Doe"
+
+}
