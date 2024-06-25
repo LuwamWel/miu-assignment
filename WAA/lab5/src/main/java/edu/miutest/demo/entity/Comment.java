@@ -1,6 +1,5 @@
 package edu.miutest.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +14,7 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @JsonManagedReference
+//    @JsonManagedReference
     @ManyToOne()
     private Post post;
 }

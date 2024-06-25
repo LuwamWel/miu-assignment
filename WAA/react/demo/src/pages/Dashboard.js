@@ -44,41 +44,10 @@ const Dashboard = () => {
     fetchPostDetails(postId);
   };
 
-  // const handleShowAllClick = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       `http://localhost:8080/api/v1/posts?limit=${inputValue}`,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-  //     setPosts(response.data);
-  //   } catch (error) {
-  //     console.error("Error fetching posts:", error);
-  //   }
-  // };
-
-  // const handleInputChange = (event) => {
-  //   setInputValue(event.target.value);
-  // };
-
   return (
     <div>
       <h1>Dashboard</h1>
       <div className="posts">
-        {/* <div>
-          <input
-            type="text"
-            name="text"
-            value={inputValue}
-            onChange={handleInputChange}
-          />
-          <button name="text" onClick={handleShowAllClick}>
-            Show By Id
-          </button>
-        </div> */}
         <h2>Posts</h2>
         <div>
           <button onClick={fetchPosts}>ShowAllPosts</button>

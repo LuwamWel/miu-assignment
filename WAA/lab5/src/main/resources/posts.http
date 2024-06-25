@@ -1,0 +1,42 @@
+### GET request to posts
+GET http://localhost:8080/api/posts
+
+###
+
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "title": "Spring rocks",
+  "content": "Spring is the greatest framework",
+  "author": "Joe Doe"
+}
+
+####
+
+POST http://localhost:8080/tests
+Content-Type: application/json
+
+{
+  "title": "Learning React",
+  "content": "React is great",
+  "author": "John Smith"
+}
+
+####
+
+PUT http://localhost:8080/api/posts/1
+Content-Type: application/json
+
+{
+  "title": "Spring rocks updated",
+  "content": "Spring is the greatest framework ever",
+  "author": "Joe Doe 1"
+}
+
+####
+
+DELETE http://localhost:8080/api/posts/2
+
+
+

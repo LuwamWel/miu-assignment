@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/users/posts")
+@RequestMapping("/api/posts")
 public class PostController {
     @Autowired
     PostService postService;
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping
+    @GetMapping("")
     public List<Post> findAll(){
         return postService.findAll();
     }
@@ -28,7 +28,7 @@ public class PostController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/")
+    @PostMapping("")
     public void save(@RequestBody Post p){
         postService.save(p);
     }

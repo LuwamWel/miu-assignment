@@ -1,0 +1,4 @@
+-- INSERT INTO student (student_id, name, gpa, address_id) VALUES
+-- (1, 'John',  3.5, 1), (2, 'Jane',  3.8, 2),
+-- (3, 'Michael', 3.9, 3), (4, 'Emily',  3.00, 4),
+-- (5, 'Daniel',3, 5);
